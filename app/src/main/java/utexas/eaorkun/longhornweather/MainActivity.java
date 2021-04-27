@@ -7,11 +7,15 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "[Coordinates] LAT: 30.267153 LONG: -97.743057 ", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -50,6 +54,27 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+        if (id == R.id.current_conditions){
+
+            View view = item.getActionView();
+
+            Navigation.findNavController(view).navigate(R.id.action_FirstFragment_to_SecondFragment);
+            return true;
+        }
+        if (id == R.id.hour_forecast){
+            View view = item.getActionView();
+
+            Navigation.findNavController(view).navigate(R.id.action_FirstFragment_to_SecondFragment);
+            return true;
+        }
+        if (id == R.id.weekly_forecast){
+            View view = item.getActionView();
+
+            Navigation.findNavController(view).navigate(R.id.action_FirstFragment_to_SecondFragment);
+            return true;
+        }
+
+
 
         return super.onOptionsItemSelected(item);
     }

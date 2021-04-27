@@ -7,9 +7,25 @@
     tools:context=".ThirdFragment">
 
     <TextView
+        android:id="@+id/textview_first3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Weekly Forecast in Austin, Texas"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#BF5700"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/button_first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <TextView
         android:id="@+id/textview_third"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Weekly Temperature"
         app:layout_constraintBottom_toTopOf="@id/button_third"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,9 +35,12 @@
         android:id="@+id/button_third"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/third"
+        android:text="Next (3/3)"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_third" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

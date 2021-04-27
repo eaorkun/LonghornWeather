@@ -14,7 +14,9 @@
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/SecondFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -24,17 +26,21 @@
 
         <action
             android:id="@+id/action_SecondFragment_to_ThirdFragment"
-            app:destination="@id/ThirdFragment" />
+            app:destination="@id/ThirdFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/ThirdFragment"
-        android:name="utexas.eaorkun.longhornweather.SecondFragment"
+        android:name="utexas.eaorkun.longhornweather.ThirdFragment"
         android:label="@string/third_fragment_label"
         tools:layout="@layout/fragment_third">
 
         <action
             android:id="@+id/action_ThirdFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/FirstFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
 
 </navigation>

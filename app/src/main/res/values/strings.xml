@@ -9,7 +9,8 @@
     <string name="previous">Previous</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_second_fragment">Hello second fragment</string>
+    <string name="hello_third_fragment">Hello third fragment</string>
     <string name="current_conditions">Current Conditions</string>
     <string name="weekly_forecast">Weekly Forecast</string>
     <string name="hourly_forecast">Hourly Forecast</string>
