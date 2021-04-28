@@ -2,22 +2,35 @@ package utexas.eaorkun.longhornweather;
 
 import android.os.Bundle;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.gson.Gson;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
-
-import java.util.Objects;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private static WeatherJson data;
+
+    public static void setData(WeatherJson newData){
+        data = newData;
+    }
+
+    public static WeatherJson getData(){
+        return data;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "[Coordinates] LAT: 30.267153 LONG: -97.743057 ", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Successfully Refreshed Page", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -55,22 +68,23 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         if (id == R.id.current_conditions){
-
-            View view = item.getActionView();
-
-            Navigation.findNavController(view).navigate(R.id.action_FirstFragment_to_SecondFragment);
             return true;
         }
         if (id == R.id.hour_forecast){
+
+            /*
             View view = item.getActionView();
 
             Navigation.findNavController(view).navigate(R.id.action_FirstFragment_to_SecondFragment);
+             */
             return true;
         }
         if (id == R.id.weekly_forecast){
+            /*
             View view = item.getActionView();
 
             Navigation.findNavController(view).navigate(R.id.action_FirstFragment_to_SecondFragment);
+            */
             return true;
         }
 
@@ -78,4 +92,8 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
+
 }
