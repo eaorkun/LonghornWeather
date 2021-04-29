@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">LonghornWeather</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
@@ -7,7 +7,6 @@
     <string name="third_fragment_label">Third Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment</string>
     <string name="hello_third_fragment">Hello third fragment</string>
@@ -16,4 +15,21 @@
     <string name="hourly_forecast">Hourly Forecast</string>
     <string name="third">Third</string>
     <string name="second">Second</string>
+    <string name="todo">TODO</string>
+    <string name="condition_broken_clouds">Condition: Broken clouds</string>
+    <string name="sunny">Sunny</string>
+    <string name="visibility_10000_meters">Visibility: 10000 meters</string>
+    <string name="pressure_1000_hpa">Pressure: 1000 hPA</string>
+    <string name="wind_speed_78_mph">Wind Speed: 78 mph</string>
+    <string name="_72_degrees">72 Degrees</string>
+    <string name="current_conditions_in_austin_texas">Current Conditions in Austin, Texas</string>
+    <string name="next_1_3" tools:ignore="TypographyFractions">Next (1/3)</string>
+    <string name="humidity_high">Humidity: High</string>
+    <string name="textview">TextView</string>
+    <string name="_78_degrees">78 Degrees</string>
+    <string name="_7pm">7PM</string>
+    <string name="hourly_forecast_in_austin_texas">Hourly Forecast in Austin, Texas</string>
+    <string name="next_2_3">Next (2/3)</string>
+    <string name="_7_day_forecast_in_austin_texas">7 Day Forecast in Austin, Texas</string>
+    <string name="next_3_3">Next (3/3)</string>
 </resources>

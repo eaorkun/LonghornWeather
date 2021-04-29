@@ -10,7 +10,7 @@
         android:id="@+id/deg2_2"
         android:layout_width="188dp"
         android:layout_height="37dp"
-        android:text="78 Degrees"
+        android:text="@string/_78_degrees"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@id/button_second"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +23,7 @@
         android:id="@+id/deg3_2"
         android:layout_width="198dp"
         android:layout_height="33dp"
-        android:text="78 Degrees"
+        android:text="@string/_78_degrees"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@id/button_second"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
         android:id="@+id/deg4_2"
         android:layout_width="191dp"
         android:layout_height="35dp"
-        android:text="78 Degrees"
+        android:text="@string/_78_degrees"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@id/button_second"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +49,7 @@
         android:id="@+id/deg5_2"
         android:layout_width="181dp"
         android:layout_height="35dp"
-        android:text="78 Degrees"
+        android:text="@string/_78_degrees"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@id/button_second"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +62,7 @@
         android:id="@+id/deg6_2"
         android:layout_width="182dp"
         android:layout_height="31dp"
-        android:text="78 Degrees"
+        android:text="@string/_78_degrees"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@id/button_second"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +75,7 @@
         android:id="@+id/deg1_2"
         android:layout_width="167dp"
         android:layout_height="45dp"
-        android:text="78 Degrees"
+        android:text="@string/_78_degrees"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@id/button_second"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,7 +88,7 @@
         android:id="@+id/deg0_2"
         android:layout_width="167dp"
         android:layout_height="34dp"
-        android:text="78 Degrees"
+        android:text="@string/_78_degrees"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@id/button_second"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,7 +101,7 @@
         android:id="@+id/temp4_2"
         android:layout_width="52dp"
         android:layout_height="29dp"
-        android:text="7PM"
+        android:text="@string/_7pm"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/button_second"
@@ -115,7 +115,7 @@
         android:id="@+id/temp5_2"
         android:layout_width="52dp"
         android:layout_height="29dp"
-        android:text="7PM"
+        android:text="@string/_7pm"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/button_second"
@@ -129,7 +129,7 @@
         android:id="@+id/temp6_2"
         android:layout_width="52dp"
         android:layout_height="29dp"
-        android:text="7PM"
+        android:text="@string/_7pm"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/button_second"
@@ -143,7 +143,7 @@
         android:id="@+id/temp3_2"
         android:layout_width="52dp"
         android:layout_height="29dp"
-        android:text="7PM"
+        android:text="@string/_7pm"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/button_second"
@@ -157,7 +157,7 @@
         android:id="@+id/temp2_2"
         android:layout_width="52dp"
         android:layout_height="29dp"
-        android:text="7PM"
+        android:text="@string/_7pm"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/button_second"
@@ -171,7 +171,7 @@
         android:id="@+id/temp1_2"
         android:layout_width="52dp"
         android:layout_height="29dp"
-        android:text="7PM"
+        android:text="@string/_7pm"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/button_second"
@@ -191,7 +191,8 @@
         app:layout_constraintHorizontal_bias="0.373"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.859" />
+        app:layout_constraintVertical_bias="0.859"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/icon4_2"
@@ -203,7 +204,8 @@
         app:layout_constraintHorizontal_bias="0.373"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612" />
+        app:layout_constraintVertical_bias="0.612"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/icon5_2"
@@ -215,7 +217,8 @@
         app:layout_constraintHorizontal_bias="0.373"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.736" />
+        app:layout_constraintVertical_bias="0.736"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/icon3_2"
@@ -227,7 +230,8 @@
         app:layout_constraintHorizontal_bias="0.373"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.499"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/icon2_2"
@@ -239,7 +243,8 @@
         app:layout_constraintHorizontal_bias="0.373"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38" />
+        app:layout_constraintVertical_bias="0.38"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/icon1_2"
@@ -251,14 +256,15 @@
         app:layout_constraintHorizontal_bias="0.373"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.251" />
+        app:layout_constraintVertical_bias="0.251"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/textview_first2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="Hourly Forecast in Austin, Texas"
+        android:text="@string/hourly_forecast_in_austin_texas"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#BF5700"
         android:textStyle="bold"
@@ -266,13 +272,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintVertical_bias="0.042"
+        tools:ignore="NotSibling" />
 
     <TextView
         android:id="@+id/temp0_2"
         android:layout_width="52dp"
         android:layout_height="29dp"
-        android:text="7PM"
+        android:text="@string/_7pm"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/button_second"
@@ -286,7 +293,7 @@
         android:id="@+id/button_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next (2/3)"
+        android:text="@string/next_2_3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.053"
@@ -304,5 +311,6 @@
         app:layout_constraintHorizontal_bias="0.373"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.137" />
+        app:layout_constraintVertical_bias="0.137"
+        android:contentDescription="@string/todo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
