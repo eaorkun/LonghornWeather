@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -56,11 +57,130 @@ public class SecondFragment extends Fragment {
 
 
                         Gson g = new Gson();
-                        WeatherJson s = g.fromJson(response, WeatherJson.class);
+                        WeatherJson wJson = g.fromJson(response, WeatherJson.class);
 
-                        final TextView textView = (TextView) getActivity().findViewById(R.id.textview_second);
 
-                        textView.setText("Response is: " + s.getLat());
+                        //String date = new java.text.SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(new java.util.Date((long)(wJson.getHourly()[0].getDt())*1000));
+                        //Date mydate = new Date((long)(wJson.getHourly()[0].getDt())*1000);
+
+                        TextView[] textViewArray = {(TextView) getActivity().findViewById(R.id.temp0_2),
+                                (TextView) getActivity().findViewById(R.id.temp1_2),
+                                (TextView) getActivity().findViewById(R.id.temp2_2),
+                                (TextView) getActivity().findViewById(R.id.temp3_2),
+                                (TextView) getActivity().findViewById(R.id.temp4_2),
+                                (TextView) getActivity().findViewById(R.id.temp5_2),
+                                (TextView) getActivity().findViewById(R.id.temp6_2)};
+
+
+
+                        for(int i = 0; i< 7; ++i){
+                            TextView textView = textViewArray[i];
+                            String date = new java.text.SimpleDateFormat("HH").format(new java.util.Date((long)(wJson.getHourly()[i].getDt())*1000));
+                            int timeNum = Integer.parseInt(date);
+                            if (timeNum == 12){
+                                date = date+"PM";
+                            }
+                            else if (timeNum == 0){
+                                date = "12AM";
+                            }
+                            else if (timeNum > 12){
+                                timeNum = timeNum - 12;
+                                date = timeNum +"PM";
+                            }
+                            else{
+                                date = timeNum + "AM";
+                            }
+                            textView.setText(date);
+                        }
+
+
+
+                        ImageView[] imageViewArray = {(ImageView) getActivity().findViewById(R.id.icon0_2),
+                                (ImageView) getActivity().findViewById(R.id.icon1_2),
+                                (ImageView) getActivity().findViewById(R.id.icon2_2),
+                                (ImageView) getActivity().findViewById(R.id.icon3_2),
+                                (ImageView) getActivity().findViewById(R.id.icon4_2),
+                                (ImageView) getActivity().findViewById(R.id.icon5_2),
+                                (ImageView) getActivity().findViewById(R.id.icon6_2)};
+
+                        //ImageView imageView = (ImageView) getActivity().findViewById(R.id.icon0_2);
+
+
+                        for(int i = 0; i < 7; i++){
+                            ImageView imageView = imageViewArray[i];
+                            String icon = wJson.getHourly()[i].getWeather()[0].getIcon();
+
+                            switch (icon){
+                                case "01d":
+                                    imageView.setImageResource(R.drawable.i01d);
+                                    break;
+                                case "01n":
+                                    imageView.setImageResource(R.drawable.i01n);
+                                    break;
+                                case "02d":
+                                    imageView.setImageResource(R.drawable.i02d);
+                                    break;
+                                case "02n":
+                                    imageView.setImageResource(R.drawable.i02n);
+                                    break;
+                                case "03d":
+                                    imageView.setImageResource(R.drawable.i03d);
+                                    break;
+                                case "03n":
+                                    imageView.setImageResource(R.drawable.i03n);
+                                    break;
+                                case "04d":
+                                    imageView.setImageResource(R.drawable.i04d);
+                                    break;
+                                case "04n":
+                                    imageView.setImageResource(R.drawable.i04n);
+                                    break;
+                                case "09d":
+                                    imageView.setImageResource(R.drawable.i09d);
+                                    break;
+                                case "09n":
+                                    imageView.setImageResource(R.drawable.i09n);
+                                    break;
+                                case "10d":
+                                    imageView.setImageResource(R.drawable.i10d);
+                                    break;
+                                case "10n":
+                                    imageView.setImageResource(R.drawable.i10n);
+                                    break;
+                                case "11d":
+                                    imageView.setImageResource(R.drawable.i11d);
+                                    break;
+                                case "11n":
+                                    imageView.setImageResource(R.drawable.i11n);
+                                    break;
+                                case "13d":
+                                    imageView.setImageResource(R.drawable.i13d);
+                                    break;
+                                case "13n":
+                                    imageView.setImageResource(R.drawable.i13n);
+                                    break;
+                                case "50d":
+                                    imageView.setImageResource(R.drawable.i50d);
+                                    break;
+                                case "50n":
+                                    imageView.setImageResource(R.drawable.i50n);
+                                    break;
+                            }
+                        }
+
+
+                        TextView[] degViewArray = {(TextView) getActivity().findViewById(R.id.deg0_2),
+                                (TextView) getActivity().findViewById(R.id.deg1_2),
+                                (TextView) getActivity().findViewById(R.id.deg2_2),
+                                (TextView) getActivity().findViewById(R.id.deg3_2),
+                                (TextView) getActivity().findViewById(R.id.deg4_2),
+                                (TextView) getActivity().findViewById(R.id.deg5_2),
+                                (TextView) getActivity().findViewById(R.id.deg6_2)};
+
+                        for(int i = 0; i<7; ++i){
+                            TextView textView = degViewArray[i];
+                            textView.setText(wJson.getHourly()[i].getTemp() + " Degrees");
+                        }
 
 
                     }

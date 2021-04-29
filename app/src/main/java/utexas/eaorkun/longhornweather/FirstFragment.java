@@ -1,5 +1,6 @@
 package utexas.eaorkun.longhornweather;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,6 +41,7 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         volleyRequest();
+        getParentFragment().getView().setBackgroundColor(Color.parseColor("#d6d2c4"));
         view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,9 +68,6 @@ public class FirstFragment extends Fragment {
 
                         Gson g = new Gson();
                         WeatherJson s = g.fromJson(response, WeatherJson.class);
-
-                        final TextView locationView = (TextView) getActivity().findViewById(R.id.locationView1);
-                        locationView.setText("[Coordinates] Lat: " + s.getLat() + " Lon: " + s.getLon());
 
                         final ImageView imageView = (ImageView) getActivity().findViewById(R.id.imageView1);
                         String icon = s.getCurrent().getWeather()[0].getIcon();
@@ -129,6 +128,9 @@ public class FirstFragment extends Fragment {
                                 imageView.setImageResource(R.drawable.i50n);
                                 break;
                         }
+
+                        final TextView tempView = (TextView) getActivity().findViewById(R.id.tempView1);
+                        tempView.setText(s.getCurrent().getTemp() + " Degrees");
 
                         final TextView feelsView = (TextView) getActivity().findViewById(R.id.feelsLike1);
                         feelsView.setText("Feels Like " + s.getCurrent().getFeels_like() + " Degrees");

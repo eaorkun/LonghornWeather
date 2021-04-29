@@ -1,6 +1,7 @@
 package utexas.eaorkun.longhornweather;
 
 public class WeatherDaily {
+    private int dt;
     Temperature temp;
     String pressure;
     String humidity;
@@ -9,7 +10,8 @@ public class WeatherDaily {
     String clouds;
     String pop;
 
-    public WeatherDaily(Temperature temp, String pressure, String humidity, String wind_speed, Weather[] weather, String clouds, String pop) {
+    public WeatherDaily(int dt, Temperature temp, String pressure, String humidity, String wind_speed, Weather[] weather, String clouds, String pop) {
+        this.dt = dt;
         this.temp = temp;
         this.pressure = pressure;
         this.humidity = humidity;
@@ -17,6 +19,10 @@ public class WeatherDaily {
         this.weather = weather;
         this.clouds = clouds;
         this.pop = pop;
+    }
+
+    public int getDt() {
+        return dt;
     }
 
     public Temperature getTemp() {

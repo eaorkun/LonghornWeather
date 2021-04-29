@@ -1,6 +1,7 @@
 package utexas.eaorkun.longhornweather;
 
 public class WeatherHourly {
+    private int dt;
     private String temp;
     private String feels_like;
     private String pressure;
@@ -11,7 +12,8 @@ public class WeatherHourly {
     private Weather[] weather;
     private String pop;
 
-    public WeatherHourly(String temp, String feels_like, String pressure, String humidity, String clouds, String visibility, String wind_speed, Weather[] weather, String pop) {
+    public WeatherHourly(int dt, String temp, String feels_like, String pressure, String humidity, String clouds, String visibility, String wind_speed, Weather[] weather, String pop) {
+        this.dt = dt;
         this.temp = temp;
         this.feels_like = feels_like;
         this.pressure = pressure;
@@ -21,6 +23,10 @@ public class WeatherHourly {
         this.wind_speed = wind_speed;
         this.weather = weather;
         this.pop = pop;
+    }
+
+    public int getDt(){
+        return dt;
     }
 
     public String getTemp() {
